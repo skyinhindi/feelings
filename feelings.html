@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Feelings Generator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        body{
+            font-family: 'Poppins', sans-serif;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+        main{
+            padding: 50px;
+            font-size: 2rem;
+        }
+
+        .center{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        button{
+            border-radius: 25px;
+            background-color: #2196F3;
+            border: 2px #fff solid;
+            color: #fff;
+            font-size: 1.2rem;
+            outline: none;
+            padding: 10px;
+            height: fit-content !important;
+        }
+
+        button:hover{
+            background-color: #1a76c2;
+            border: 2px #2196F3 solid;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="center">
+            <p>feeling</p>
+        </div>
+        <div class="center">
+            <button onclick="getWord()">Click Me</button>
+        </div>
+    </main>
+    <script>
+        function getWord(){
+            const feelings = ['sad', 'happy', 'angry', 'lonely', 'confused'];
+            let p = document.querySelector('p');
+            p.innerHTML = feelings[Math.floor(Math.random() * feelings.length)];
+        }
+    </script>
+</body>
+</html>
